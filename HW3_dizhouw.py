@@ -223,6 +223,12 @@ target_url = ( "https://archive.ics.uci.edu/ml/machine-learning-"
 rocksVMines = pd.read_csv(target_url, header = None, prefix = "V")
 # iat: Similar to iloc, in that both provide integer-based lookups. Use iat if you only need to get or set a single value in a DataFrame or Series.
 
+
+#due the issue with col/row, we can change dataRow to dataCol
+#something like
+#dataRow = rocksVMines.iloc[0:60, 1]
+#rest is essentially the same.
+
 #calculate corr 
 dataRow2 = rocksVMines.iloc[1, 0:60]
 dataRow3 = rocksVMines.iloc[2, 0:60]
